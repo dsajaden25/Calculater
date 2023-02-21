@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            background-image: url(cal_bg.jpeg);
+        }
+        h1{
+            text-align: center;
+            color: burlywood;
+            background-color: blueviolet;
+            
+        }
+        .outline{
+            /* background-image: url(https://i.pinimg.com/originals/3c/c7/aa/3cc7aaafabee95588c7fb5d4ea45adf2.jpg); */
+            border: 2px solid black;
+            width: 390px;
+            height: 580px;
+            text-align: center;
+            /* position:absolute; */
+            padding: 20px;
+            margin: auto;
+            left: 500px;
+            top: 100px;
+            background-color: silver;
+            border-radius: 40px;
+
+        }
+
+        input{
+            width: 90px;
+            height: 80px;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 20px;
+            border-color: rgb(8, 8, 8);
+            margin: 0px;
+
+        }
+        
+        #cl{
+            width: 380px;
+            padding: 5px;
+            border: 2px solid black;
+            /* opacity: 60%; */
+
+        }
+        
+        #clr{
+            width: 150px;
+            background-color: rgb(247, 157, 172);
+            height: 60px;
+        }
+        #clr:hover{
+            background-color: lightpink;
+        }
+        #eq{
+            width: 215px;
+            background-color: rgb(4, 182, 19);
+            height: 60px;
+        }
+        #eq:hover{
+            background-color: lightgreen;
+        }
+        #b{
+            background-color: red;
+            border-radius: 40px;
+        }
+        #b:hover{
+            background-color: rgb(216, 85, 85);
+        }
+        #bt{
+            border-radius: 60px;
+        }
+
+        #bt:hover{
+            background-color: rgb(200, 212, 218);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="outline">
+        <form action="" name="form1" >
+                <input type="text" id="cl" name="results" placeholder="0"><br><br>
+
+                <input type="button" value="1" onclick="form1.results.value += '1'" id="bt">
+                <input type="button" value="2" onclick="form1.results.value += '2'" name="" id="bt">
+                <input type="button" value="3" onclick="form1.results.value += '3'" name="" id="bt">
+                <input type="button" id="b" value="Back" onclick="back()" name="" id="">
+                
+                <br><br>
+
+                <input type="button" value="4" onclick="form1.results.value += '4'" name="" id="bt">
+                <input type="button" value="5" onclick="form1.results.value += '5'" name="" id="bt">
+                <input type="button" value="6" onclick="form1.results.value += '6'" name="" id="bt">
+                <input type="button" value="+" onclick="form1.results.value += '+'" id="bt">
+                
+                <br><br>
+
+                <input type="button" value="7" onclick="form1.results.value += '7'" name="" id="bt">
+                <input type="button" value="8" onclick="form1.results.value += '8'" name="" id="bt">
+                <input type="button" value="9" onclick="form1.results.value += '9'" name="" id="bt">
+                <input type="button" value="-" onclick="form1.results.value += '-'" name="" id="bt">
+                
+                <br><br>
+
+                <input type="button" value="/" onclick="form1.results.value += '/'" name="" id="bt">
+                <input type="button" value="0" onclick="form1.results.value += '0'" name="" id="bt">
+                <input type="button" value="." onclick="form1.results.value += '.'" name="" id="bt">
+                <input type="button" value="*" onclick="form1.results.value += '*'" name="" id="bt">
+
+                
+                <br><br>
+
+                <input type="button" id="eq" value="=" onclick="form1.results.value += '=' + eval(form1.results.value)" name="" id="">
+                <input type="button" id="clr" value="clear" onclick="form1.results.value = ' '" name="" id="">
+                
+
+        </form>
+        <script>
+           function back() {
+                var value = document.getElementById("cl").value;
+                document.getElementById("cl").value = value.substr(0, value.length - 1);
+            }
+
+        </script>
+    </div>
+
+    
+</body>
+</html>
